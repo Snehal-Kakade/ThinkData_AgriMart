@@ -14,44 +14,15 @@ It does the processing of data depending upon the user inputs and send the outpu
 Execute below mentioned steps to run the Shiny Dashboard
 
 1)	Install latest version of R and R Studio Desktop on your machine.
-
-To Install R
-
-i)	Open an internet browser and go to www.r-project.org.
-ii)	Click the "download R" link in the middle of the page under "Getting Started."
-iii)	Select a CRAN location (a mirror site) and click the corresponding link.
-iv)	Click on the "Download R for ----" link as per your operating system.
-v)	Click on the file containing the latest version of R under "Files."
-vi)	Save the .pkg file, double-click it to open, and follow the installation instructions.
-vii)	Now that R is installed, you need to download and install RStudio.
-
-To Install RStudio
-
-i)	Go to www.rstudio.com and click on the "Download RStudio" button.
-ii)	Click on "Download RStudio Desktop."
-iii)	Click on the version recommended for your system, or the latest Windows version, and save the executable file.  Run the .exe file and follow the installation instructions.     
-
 2)	Create a working directory (folder) on your machine.
-E.g. - E:\ThinkData\Shiny\ThinkData_AgriMart
-Folder ìThinkData_AgriMartî is the working directory.
-3)	Download the GitHub repository to your desktop.
-4)	Unzip the downloaded file. Extracted folder will contain one folder named ìFutureStayDashboardî and one R script named ìFutureStay.Rî.
-5)	Place the folder ìFutureStayDashboardî and R script ìFutureStay.Rî in the working directory created in step 2.
-6)	Place ìfuturestay_csvî database folder in the working directory created in step 2.
-7)	Open all the three R scripts in R studio.
-8)	Change the working directory path in FutureStay.R to your working directory.
-E.g. setwd("C:/Users /Desktop/DataScience/Upwork/Project_Futurestay")
-Note: R uses forward slash ë/í in directory structure.
-9)	Execute the FutureStay.R script to preprocess the data. 
-Script can be executed in two ways:
-a)	Select entire code using ìCtrl+Aî and hit Run button
-b)	Set the working directory using command on console
-setwd("C:/Users /Desktop/DataScience/Upwork/Project_Futurestay") and then run below command on console
-source("FutureStay.R", echo = TRUE)
-10)	Step 9 will create all the necessary datasets for Dashboard execution. Now you can run the Shiny Dashboard.
-It can executed in two ways:
-a)	Open the server.R and ui.R and hit ìRun Appî button
-b)	   Execute below command on console:
-runApp("FutureStayDashboard")
-11)	After executing above step you can explore the Shiny Dashboard.
+    E.g. - E:\ThinkData\Shiny\ThinkData_AgriMart
+    Folder ‚ÄúThinkData_AgriMart‚Äù is your working directory.
+3)	Download the GitHub repository "https://github.com/Snehal-Kakade/ThinkData_AgriMart" to your desktop.
+4)	Unzip the downloaded file. Extracted folder will contain all the R scripts required for the execution. (Note: I have also kept the agrimarketData.rda dataset if you want to       run the shiny app without pulling the data from server. Rdata file is the compressed verion of data from the server)
+5)	Copy all the files to your working directory i.e. "E:\ThinkData\Shiny\ThinkData_AgriMart".
+6)	Open the global.R file and set the WD variable with your working directory.
+	  E.g. WD <- "E:/ThinkData/Shiny/ThinkData_AgriMart" (Note here the '\' will change to '/')
+7)  Execute the global.R script. It will pull the data from server and save it Rdata in the working directory which will be used by Dashbaord.
+8)  Run the Shiny App 
+9)  Now you can run and explore the Shiny Dashboard.
 
